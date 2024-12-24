@@ -1,0 +1,622 @@
+*{
+    box-sizing: border-box; 
+    /*The box-sizing: border-box; property in CSS ensures that the total width and 
+    height of an element includes its padding and border, 
+    so these do not increase the element's specified dimensions.*/
+
+    /*OR*/
+
+    /*In CSS, box-sizing: border-box; makes the width and height of an element 
+    include its padding and border, so the total size of the element stays consistent 
+    regardless of the padding or border size and making layout calculations more 
+    predictable.*/
+
+    /*box-sizing: border-box;, when you set the width or height of an element, 
+    it includes the content area, padding, and border, so the total size stays fixed, 
+    unlike the default content-box, where padding and border are added outside the set 
+    width and height.*/
+
+    margin: 0;
+    /*In CSS, `* { margin: 0; }` removes the default margin 
+    from all elements on the page, ensuring consistent spacing across the layout.*/
+
+    padding: 0;
+    /*In CSS, `* { padding: 0; }` removes the default padding 
+    from all elements, ensuring a consistent layout with no extra internal spacing by 
+    default.*/
+
+    font-family: 'kumbh Sans', sans-serif;
+}
+.navbar{
+    background: #131313;
+    /*background: #131313;  applies a background color of #131313 (a dark gray)*/
+    height: 120px;
+    display: flex; /*It brings all the nav bar into a roll in one straight line*/
+    /*.navbar { display: flex; } applies a flexbox layout 
+    to the .navbar element, enabling flexible alignment and distribution of its child 
+    elements.*/
+
+
+    justify-content: center; /*It moves everything in the nav bar to tthe center*/
+    /*OR*/
+    /*In CSS, `.navbar { justify-content: center; }` centers the flex items 
+    horizontally within the `.navbar` container when it's set as a flexbox 
+    (`display: flex;`).*/
+
+    align-items: center;
+    font-size:1.2rem ;
+    position: sticky;
+    /*In CSS, `.navbar { position: sticky; }` makes the navbar stick to a specified 
+    position (e.g., `top: 0;`) within its parent container as the user scrolls, ensuring
+     it remains visible until its parent container is out of view.*/
+
+    top: 0; 
+    /*In CSS, the rule `.navbar { top: 0; }` positions the `.navbar` element at the very 
+    top of its containing block or viewport if it has a relative, absolute, or fixed 
+    positioning context.*/
+
+    z-index: 999;
+    /*In CSS, `.navbar { z-index: 999; }` ensures that the `.navbar` element is 
+    displayed above other elements on the page by setting its stack order to a high 
+    value, where elements with higher `z-index` values appear in front of those with 
+    lower values when they overlap.*/
+
+}
+.navbar__container {
+    display: flex ;
+    justify-content: space-between;
+    /*The CSS rule `.navbar { justify-content: space-between; }` aligns the items in 
+    the `.navbar` container such that the first item is aligned to the start, the last
+     item is aligned to the end, and any remaining space is evenly distributed between 
+     them.*/
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    /*In CSS, `.navbar { max-width: 1300px; }` restricts the width of the HTML element 
+    with the `navbar` class to a maximum of 1300 pixels, ensuring
+     it does not grow beyond this size even if the container or viewport is larger.*/
+    margin: 0 auto;
+    padding: 0 50px; 
+
+
+}
+#navbar__logo {
+    background-color: #ff8177;
+    /*The CSS rule `#navbar__logo {background-color: #ff8177;}` selects an HTML element 
+    with the ID `navbar__logo` and sets its background
+     color to a light reddish-pink shade using the hexadecimal color code `#ff8177`.*/
+
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100% );
+    /*The CSS rule `#navbar__logo {background-image: 
+    linear-gradient(to top, #ff0844 0%, #ffb199 100% );}` 
+    applies a linear gradient background to the element with the ID `navbar__logo`, 
+    transitioning from a dark pinkish-red color (`#ff0844`) 
+     the bottom (0%) to a lighter peachy-pink color (`#ffb199`) at the top (100%).*/
+    background-size: 100%;
+
+    -webkit-background-clip: text;
+    /*The CSS property `-webkit-background-clip: text;` applied to the `#navbar__logo` 
+    ensures that the background of the element is clipped to the text, allowing the 
+    background (such as a gradient or image) to show through only the text while the 
+    rest remains transparent.*/
+
+    -moz-background-clip: text;
+    /*The CSS rule `#navbar__logo { -moz-background-clip: text; }` ensures that the 
+    background of the `#navbar__logo` element is clipped to the text, making the 
+    background visible only where the text appears, but it works specifically in 
+    Mozilla Firefox as it uses the `-moz-` vendor prefix. To make this effect fully 
+    functional, it typically requires additional properties like `background` 
+    and `color: transparent`.*/
+
+    -webkit-text-fill-color: transparent;
+    /*The CSS rule `#navbar__logo { -webkit-text-fill-color: transparent; }` makes the 
+    text color of the element with the ID `navbar__logo` completely transparent 
+    when used with additional styles, such as `background-clip: text`, to create visual 
+    effects like gradient text.*/
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size:  2rem;
+}
+
+.fa-gen{
+  margin-right: 0.5rem;
+}
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+.navbar_item {
+    height:80px;
+}
+.navbar__links{
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+.navbar__links:hover{
+    background: #4837ff;
+    color: #f77062;
+    transition: all 0.3s ease;
+    font-weight:bolder;
+    font-size: xx-large;
+    border-radius: 30px;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+.button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 7px 3px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+.button:hover {
+    background: #4837ff;
+    color: #f77062;
+    transition: all 0.3s ease;
+    font-weight:bolder;
+    font-size: xx-large;
+}
+@media screen and (max-width: 960px) {
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition:  all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+    .navbar__menu .active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+    .navbar__item {
+        width: 100%;
+    }
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width:100%;
+        display: table;
+    }
+    #mobile-menu {
+        position: absolute;
+        top:20;
+        right:5%;
+        transform: translate(5%, 20%);
+    }
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/*Hero Section CSS*/
+.main {
+    background-color: #141414;
+}
+.main__container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 200vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 5000vh;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+.main__content h1 {
+    font-size:4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff8844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent
+}
+.main__content h2{
+    font-size:4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent
+}
+.main__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #27b0de 0%, #efd01c 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent
+}
+.main__btn {
+    font-size:1rem;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+    outline: none;
+}
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+.main__btn::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #4837ff;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+.main__btn:hover{
+    color: #fff;
+    font-weight:bolder;
+    font-size: xx-large;
+}
+.main__btn:hover::after{
+    width: 100%;
+}
+.main__img--container{
+   text-align:center;
+}
+#main__img{
+    height: 80%;
+    width: 80%;
+}
+
+/*Mobile Responsiveness*/
+@media screen and (max-width: 768px) {
+    .main__container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+    .main__content{
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+
+    }
+    .main__content h2{
+        font-size: 3rem;
+    }
+    .main_content p{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+
+    }
+    .main__content h2{
+        font-size: 2rem;
+    }
+    .main_content p{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .main__btn{
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+/*Services Section CSS*/
+.services {
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.services h1{
+    background-color: #ff8177;
+    background-image: linear-gradient( 
+    to right, 
+    #ff8177 0%, 
+    #ed5b4d 0%, 
+    #8d258d 21%, 
+    #f99184 52%, 
+    #cf556c 78%, 
+    #b12a5b 100%);
+    background-size: 100%;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent
+}
+.services__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.services__card {
+    margin: 1rem;
+    height: 525px;
+    width: 400px;
+    border-radius: 4px;
+    background-image: linear-gradient
+    (to bottom, rgba(0,0,0,0) 0%, 
+    rgba(17,17,17,0.6) 100%), 
+    url('./images/imagepics/catfish.jpg');
+    background-size: cover;
+    position: relative;
+    color: #ae1313;
+   
+}
+.services__card:nth-child(2) {
+    background-image: linear-gradient
+    (to bottom, rgba(0,0,0,0) 0%, 
+    rgba(17,17,17,0.6) 100%), url('./images/imagepics/catfish.jpg');
+}
+.services h2 {
+    position: absolute;
+    top: 350px;
+    left: 30px;
+}
+.services__card p{
+    position: absolute;
+    top: 400px;
+    left: 30px;
+}
+.services__card button{
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.services__card:hover{
+    transform: scale(1.075);
+    transition: 0.2 ease-in;
+    cursor: pointer;
+}
+@media screen and (max-width: 960px) {
+    .services{
+        height: 1600px;
+    }
+    .services h1 {
+        font-size: 2rem;
+        margin-top: 12rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .services {
+        height: 1400px;
+    }
+    .services h1 {
+        font-size: 1.2rem;
+    }
+    .services__card {
+        width:300px;
+    }
+}
+/*GENERAL FOOTER CSS SECTION*/
+.footer__container {
+    background-color: #141414;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+.footer__link--wrapper{
+    display: flex;
+}
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin:16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+.footer__link--items h2 {
+    margin-bottom: 16px;
+}
+.footer__link--items > h2 {
+    color: #fff;
+}
+.footer__link--items a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+.footer__link--items:hover{
+    color: #e9e9e9;
+    transition: 0.3s ease-out;
+}
+/*SOCIAL ICONS*/
+.social__icons--link {
+    color: #fff;
+    font-size: 24px;
+}
+.social__media {
+    background-color: #141414;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.social__media--wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+.social__icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+.social__logo {
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.website__rights{
+    color: #fff;
+}
+@media screen and (max-width:820) {
+    .footer__links {
+       padding-top: 2rem; 
+    }
+    #footer__logo{
+        margin-bottom: 2rem;
+    }
+    .website__rights {
+        margin-bottom: 2rem;
+    }
+    .footer__link--wrapper{
+        flex-direction: column;
+    }
+    .social__media--wrap {
+        flex-direction: column ;
+    }
+}
+@media screen and (max-width: 480px) {
+    .footer__link--items {
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}
